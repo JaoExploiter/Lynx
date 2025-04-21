@@ -148,8 +148,8 @@ local keybind1 = LynxLib:AddKeyBind({
     Description = "Press a key to bind the action.",
     Bind = "E",
     Tab = tab1,
-    Callback = function(input)
-        print("Key pressed:", input.KeyCode.Name)
+    Callback = function()
+        print("Binded key pressed")
     end,
 })
 ```
