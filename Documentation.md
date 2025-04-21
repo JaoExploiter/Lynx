@@ -22,8 +22,8 @@ Loads the main library into your script.
 ### Creating a Window
 
 ```lua
-local window = LynxLib:MakeWindow({
-    Name = "Lynx UI"
+local window = LynxLib.MakeWindow({
+	Name = "Network"
 })
 ```
 
