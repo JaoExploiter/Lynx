@@ -23,7 +23,7 @@ Loads the main library into your script.
 
 ```lua
 local window = LynxLib.MakeWindow({
-	Name = "Network"
+	Name = "Lynx Lib"
 })
 ```
 
