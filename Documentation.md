@@ -146,6 +146,7 @@ local slider1 = LynxLib:AddSlider({
 local keybind1 = LynxLib:AddKeyBind({
     Title = "Open Menu",
     Description = "Press a key to bind the action.",
+    Bind = "E",
     Tab = tab1,
     Callback = function(input)
         print("Key pressed:", input.KeyCode.Name)
