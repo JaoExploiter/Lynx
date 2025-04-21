@@ -1531,7 +1531,7 @@ Closure = function()
     local script = G2L["e"];local Lynx = {}
 
 function Lynx.MakeWindow(text)
-	if type(_G.CreateGui) == "function" then
+	if type(_G.MakeWindow) == "function" then
 		_G.MakeWindow(text)
 	end
 end
