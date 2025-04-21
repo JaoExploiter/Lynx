@@ -113,6 +113,52 @@ local textbox1 = LynxLib:AddTextBox({
 
 ---
 
+### Adding a DropDown
+
+```lua
+local dropdown1 = LynxLib:AddDropDown({
+    Title = "Buttons",
+    Description = "See all buttons.",
+    Buttons = { "Button1", "Button2" },
+    Tab = tab1,
+    Callback = function(SelectedButton)
+        print(SelectedButton)
+    end,
+})
+```
+
+| Argument      | Type         | Description                                                                 |
+|---------------|--------------|-----------------------------------------------------------------------------|
+| `Title`       | `string`     | The title displayed at the top of the dropdown.                            |
+| `Description` | `string`     | Optional subtext displayed below the title.                                |
+| `Buttons`     | `table`      | A list of strings representing the buttons to show inside the dropdown.    |
+| `Tab`         | `Tab`        | The tab where the dropdown will be added.                                  |
+| `Callback`    | `function`   | Function called when a button is selected. Receives the selected button name. |
+
+---
+
+### Adding a ColorPicker
+
+```lua
+Lib:AddColorPicker({
+    Title = "ColorPicker",
+    Description = "My colorpicker",
+    Tab = tab1,
+    Callback = function(Color3)
+       print(Color3)
+    end,
+})
+```
+
+| Argument      | Type         | Description                                                                 |
+|---------------|--------------|-----------------------------------------------------------------------------|
+| `Title`       | `string`     | The title displayed at the top of the color picker.                         |
+| `Description` | `string`     | Optional subtext displayed below the title.                                 |
+| `Tab`         | `Tab`        | The tab where the color picker will be added.                               |
+| `Callback`    | `function`   | Function called when the selected color changes. Receives the selected `Color3`. |
+
+---
+
 ### Adding a Slider
 
 ```lua
