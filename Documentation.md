@@ -12,7 +12,7 @@ This documentation covers all essential functions, including how to set up the l
 ###  Initializing the UI Library
 
 ```lua
-local LynxLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/JaoExploiter/Lynx/refs/heads/main/Source"))()
+local LynxLib = loadstring(game:HttpGet("Not Realeaed"))()
 ```
 
 Loads the main library into your script.
