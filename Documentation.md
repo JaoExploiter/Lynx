@@ -1,4 +1,4 @@
-# 📚 Lynx Documentation  
+# Lynx Documentation  
 ---
 
 **Lynx** is a sleek, lightweight, and highly optimized UI library for Roblox, crafted to streamline the creation of interactive and visually polished user interfaces. Whether you're building developer tools, admin panels, or feature-rich menus, Lynx allows you to create advanced UI systems with minimal effort and maximum control.
@@ -68,3 +68,30 @@ local button1 = LynxLib:AddButton({
 | `Callback`    | `function` | Function to run when the button is clicked. |
 
 ---
+
+Claro! Aqui está a seção do **Toggle Button** com o mesmo padrão profissional, sem emojis, e com a tabela de argumentos:
+
+---
+
+### Adding a Toggle Button
+
+```lua
+local togglebutton1 = LynxLib:AddToggle({
+    Title = "Toggle Button",
+    Description = "Press the black button!",
+    Tab = tab1,
+    Callback = function(ToggleState)
+        print(ToggleState)
+    end,
+})
+```
+
+| Argument      | Type       | Description                                                        |
+|---------------|------------|--------------------------------------------------------------------|
+| `Title`       | `string`   | Text displayed as the toggle's title.                              |
+| `Description` | `string`   | Additional text or tooltip shown below the title.                 |
+| `Tab`         | `Tab/instance`      | The tab where this toggle will be placed.                         |
+| `Callback`    | `function` | Function that runs when the toggle is changed. Receives `true` or `false` as an argument. |
+
+---
+
