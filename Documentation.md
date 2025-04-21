@@ -231,7 +231,7 @@ Changes the title of the main UI window dynamically.
 ### Sending a Notification
 
 ```lua
-local not = LynxLib:SendNotification({
+local notification = LynxLib:SendNotification({
     Title = "Lynx Lib",
     Description = "You have received a notification!",
     Duration = 5,
