@@ -178,4 +178,81 @@ local label1 = LynxLib:AddLabel({
 
 ---
 
+## Misc Functions
 
+---
+
+### Closing the UI
+
+```lua
+LynxLib:CloseGui()
+```
+
+Closes the interface completely and removes it from the screen.
+
+---
+
+### Minimizing the UI
+
+```lua
+LynxLib:Minimize()
+```
+
+Collapses the UI window into a smaller or hidden state.
+
+---
+
+### Maximizing the UI
+
+```lua
+LynxLib:Maximize()
+```
+
+Restores the UI window to its full view after being minimized.
+
+---
+
+### Changing the UI Title
+
+```lua
+LynxLib:SetTitle({
+    Text = "New Title",
+})
+```
+
+| Argument | Type     | Description                     |
+|----------|----------|---------------------------------|
+| `Text`   | `string` | The new title to display in UI. |
+
+Changes the title of the main UI window dynamically.
+
+---
+
+### Sending a Notification
+
+```lua
+local not = LynxLib:SendNotification({
+    Title = "Lynx Lib",
+    Description = "You have received a notification!",
+    Duration = 5,
+})
+```
+
+| Argument      | Type     | Description                           |
+|---------------|----------|---------------------------------------|
+| `Title`       | `string` | Title of the notification.            |
+| `Description` | `string` | Message displayed inside the popup.   |
+| `Duration`    | `number` | Duration (in seconds) the notification stays visible. |
+
+---
+
+### Crashing the Client
+
+```lua
+-- use with caution
+LynxLib:Crash()
+```
+
+Forcefully crashes the local player’s game client. Intended for testing or deterrent purposes only.
+
+---
