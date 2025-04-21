@@ -69,10 +69,6 @@ local button1 = LynxLib:AddButton({
 
 ---
 
-Claro! Aqui está a seção do **Toggle Button** com o mesmo padrão profissional, sem emojis, e com a tabela de argumentos:
-
----
-
 ### Adding a Toggle Button
 
 ```lua
@@ -94,4 +90,92 @@ local togglebutton1 = LynxLib:AddToggle({
 | `Callback`    | `function` | Function that runs when the toggle is changed. Receives `true` or `false` as an argument. |
 
 ---
+
+### Adding a Text Box
+
+```lua
+local textbox1 = LynxLib:AddTextBox({
+    Title = "TextBox",
+    Description = "Type some text in the textbox!",
+    Tab = tab1,
+    Callback = function(input)
+        print(input)
+    end,
+})
+```
+
+| Argument      | Type       | Description                                                     |
+|---------------|------------|-----------------------------------------------------------------|
+| `Title`       | `string`   | The title displayed above the textbox.                          |
+| `Description` | `string`   | Optional description or instruction shown below the title.      |
+| `Tab`         | `Tab`      | The tab where this textbox will appear.                         |
+| `Callback`    | `function` | Function that runs when the user inputs text. Returns the text. |
+
+---
+
+### Adding a Slider
+
+```lua
+local slider1 = LynxLib:AddSlider({
+    Title = "Brightness",
+    Description = "Adjust screen brightness.",
+    Tab = tab1,
+    Callback = function(value)
+        print("Slider value:", value)
+    end,
+})
+```
+
+| Argument      | Type       | Description                                                              |
+|---------------|------------|--------------------------------------------------------------------------|
+| `Title`       | `string`   | The title displayed above the slider.                                   |
+| `Description` | `string`   | Optional subtext or explanation below the title.                         |
+| `Tab`         | `Tab`      | The tab where the slider will be displayed.                             |
+| `Callback`    | `function` | Function called when the slider value changes. Returns the current value. |
+
+**Note:**  
+- The slider's default minimum value is `0`,  
+- The default maximum value is `100`,  
+- The default starting value is `0`.
+
+---
+
+### Adding a Key Bind
+
+```lua
+local keybind1 = LynxLib:AddKeyBind({
+    Title = "Open Menu",
+    Description = "Press a key to bind the action.",
+    Tab = tab1,
+    Callback = function(input)
+        print("Key pressed:", input.KeyCode.Name)
+    end,
+})
+```
+
+| Argument      | Type       | Description                                                              |
+|---------------|------------|--------------------------------------------------------------------------|
+| `Title`       | `string`   | The label/title of the keybind.                                         |
+| `Description` | `string`   | Optional description to guide the user.                                 |
+| `Tab`         | `Tab`      | The tab where the keybind will appear.                                  |
+| `Callback`    | `function` | Function that runs when a key is bound. Returns the input object.        |
+
+---
+
+### Adding a Label
+
+```lua
+local label1 = LynxLib:AddLabel({
+    Text = "Welcome to Lynx UI!",
+    Tab = tab1,
+})
+```
+
+| Argument  | Type     | Description                                |
+|-----------|----------|--------------------------------------------|
+| `Text`    | `string` | The text content of the label.             |
+| `Tab`     | `Tab`    | The tab where the label will be displayed. |
+
+---
+
 
