@@ -36,7 +36,7 @@ local window = LynxLib.MakeWindow({
 ### Creating a Tab
 
 ```lua
-local tab1 = LynxLib:NewTab({
+local tab1 = LynxLib.NewTab({
     Name = "Main Tab"
 })
 ```
@@ -50,7 +50,7 @@ local tab1 = LynxLib:NewTab({
 ###  Adding a Button
 
 ```lua
-local button1 = LynxLib:AddButton({
+local button1 = LynxLib.AddButton({
     Title = "Click Me!",
     Description = "This is a test button.",
     Tab = tab1,
@@ -72,7 +72,7 @@ local button1 = LynxLib:AddButton({
 ### Adding a Toggle Button
 
 ```lua
-local togglebutton1 = LynxLib:AddToggle({
+local togglebutton1 = LynxLib.AddToggle({
     Title = "Toggle Button",
     Description = "Press the black button!",
     Tab = tab1,
@@ -94,7 +94,7 @@ local togglebutton1 = LynxLib:AddToggle({
 ### Adding a Text Box
 
 ```lua
-local textbox1 = LynxLib:AddTextBox({
+local textbox1 = LynxLib.AddTextBox({
     Title = "TextBox",
     Description = "Type some text in the textbox!",
     Tab = tab1,
@@ -116,7 +116,7 @@ local textbox1 = LynxLib:AddTextBox({
 ### Adding a DropDown
 
 ```lua
-local dropdown1 = LynxLib:AddDropDown({
+local dropdown1 = LynxLib.AddDropDown({
     Title = "Buttons",
     Description = "See all buttons.",
     Buttons = { "Button1", "Button2" },
@@ -140,7 +140,7 @@ local dropdown1 = LynxLib:AddDropDown({
 ### Adding a ColorPicker
 
 ```lua
-Lib:AddColorPicker({
+LynxLib.AddColorPicker({
     Title = "ColorPicker",
     Description = "My colorpicker",
     Tab = tab1,
@@ -162,7 +162,7 @@ Lib:AddColorPicker({
 ### Adding a Slider
 
 ```lua
-local slider1 = LynxLib:AddSlider({
+local slider1 = LynxLib.AddSlider({
     Title = "Brightness",
     Description = "Adjust screen brightness.",
     Tab = tab1,
@@ -189,7 +189,7 @@ local slider1 = LynxLib:AddSlider({
 ### Adding a Key Bind
 
 ```lua
-local keybind1 = LynxLib:AddKeyBind({
+local keybind1 = LynxLib.AddKeyBind({
     Title = "Open Menu",
     Description = "Press a key to bind the action.",
     InitialBind = "E",
@@ -212,7 +212,7 @@ local keybind1 = LynxLib:AddKeyBind({
 ### Adding a Label
 
 ```lua
-local label1 = LynxLib:AddLabel({
+local label1 = LynxLib.AddLabel({
     Text = "Welcome to Lynx UI!",
     Tab = tab1,
 })
@@ -232,7 +232,7 @@ local label1 = LynxLib:AddLabel({
 ### Closing the UI
 
 ```lua
-LynxLib:CloseGui()
+LynxLib.CloseGui()
 ```
 
 Closes the interface completely and removes it from the screen.
@@ -242,7 +242,7 @@ Closes the interface completely and removes it from the screen.
 ### Minimizing the UI
 
 ```lua
-LynxLib:Minimize()
+LynxLib.Minimize()
 ```
 
 Collapses the UI window into a smaller or hidden state.
@@ -252,7 +252,7 @@ Collapses the UI window into a smaller or hidden state.
 ### Maximizing the UI
 
 ```lua
-LynxLib:Maximize()
+LynxLib.Maximize()
 ```
 
 Restores the UI window to its full view after being minimized.
@@ -262,7 +262,7 @@ Restores the UI window to its full view after being minimized.
 ### Changing the UI Title
 
 ```lua
-LynxLib:SetTitle({
+LynxLib.SetTitle({
     Text = "New Title",
 })
 ```
@@ -278,7 +278,7 @@ Changes the title of the main UI window dynamically.
 ### Sending a Notification
 
 ```lua
-local notification = LynxLib:SendNotification({
+local notification = LynxLib.SendNotification({
     Title = "Lynx Lib",
     Description = "You have received a notification!",
     Duration = 5,
@@ -297,7 +297,7 @@ local notification = LynxLib:SendNotification({
 
 ```lua
 -- use with caution
-LynxLib:Crash()
+LynxLib.Crash()
 ```
 
 Forcefully crashes the local player’s game client. Intended for testing or deterrent purposes only.
